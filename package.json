@@ -1,0 +1,25 @@
+{
+  "name": "bird",
+  "version": "1.0.0",
+  "description": "deploy code to remote machine",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@gitlab.xiaohongshu.com:wfan2/bird.git"
+  },
+  "keywords": [
+    "utils"
+  ],
+  "bin": {
+    "bird": "./bin/index.js"
+  },
+  "author": "fanwei",
+  "license": "ISC",
+  "dependencies": {
+    "commander": "^2.12.2",
+    "flightplan": "^0.6.17",
+    "chalk": "^2.3.2"
+  }
+}

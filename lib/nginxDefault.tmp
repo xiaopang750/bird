@@ -1,0 +1,20 @@
+server {
+  listen <%= port %>;
+  location / {
+    try_files $uri /index.<%= port %>.html;
+  }
+  location ^~ /formula-static/<%= projectName %> {
+    root /home/op/data;
+  }
+  location = /index.<%= port %>.html {
+    root /home/op/data/formula-static/<%= projectName %>/public;
+  }
+
+  location /api1 {
+    proxy_pass http://xxxx.com;
+  }
+
+  location ~.*\.(html)$ {
+    add_header Cache-Control no-cache;
+  }
+}
