@@ -22,6 +22,7 @@
     "flightplan": "^0.6.17",
     "chalk": "^2.3.2",
     "mkdirp": "^0.5.1",
-    "shelljs": "0.8.1"
+    "shelljs": "^0.8.1",
+    "lodash": "^4.17.4"
   }
 }
