@@ -2,9 +2,11 @@
 
 ## 使用
 
-1. 进入你的project目录, 你的目录必须包含package.json且需要有name字段代表项目名称
+1. npm install git+ssh://https://github.com/xiaopang750/bird.git -g -d
 
-2. 在项目目录下执行 bird ge 生成project nginx conf
+2. 进入你的project目录, 你的目录必须包含package.json且需要有name字段代表项目名称
+
+3. 在项目目录下执行 bird ge 生成project nginx conf
 
 ```
 server {
@@ -31,7 +33,7 @@ projectName 可以用来存放build后的代码用于区分 比如 A项目存储
 有了这两个变量就可以按实际情况来修改nginx配置
 ```
 
-3. 执行 bird deploy -p port 把本地打包后的代码同步到测试机 修改nginx配置重启nginx, ~/.bird/config.json中可以修改deploy配置
+4. 执行 bird deploy -p port 把本地打包后的代码同步到测试机 修改nginx配置重启nginx, ~/.bird/config.json中可以修改deploy配置
 ```
 {
   "username": "root",
