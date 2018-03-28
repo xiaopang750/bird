@@ -17,7 +17,9 @@ let nowProjectName
 
 try {
   packageInfo = fs.readFileSync(`${nowWorkDir}/package.json`, 'utf8')
-  nowProjectName = packageInfo.match(/"name"\s?:\s?"(\w+)"/)[1]
+  packageInfo = JSON.parse(packageInfo)
+  nowProjectName = packageInfo.name
+  nowProjectName = nowProjectName.replace('/', '')
 } catch (e) {
   log(chalk.red('not found projectName please check your package.json has name field!'))
 }
